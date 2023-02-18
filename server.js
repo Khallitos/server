@@ -12,7 +12,7 @@ import { nanoid } from "nanoid";
 import path from "path"
 import bodyParser from 'body-parser';
 import jwtChecker from "./middleware/jwtChecker.js";
-const cors=require("cors");
+const cors = require("cors")
 const corsOptions ={
    origin:'http://localhost:3000', 
    credentials:true,            //access-control-allow-credentials:true
