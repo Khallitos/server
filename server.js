@@ -19,11 +19,11 @@ const corsOptions ={
    optionSuccessStatus:200,
 }
 
-app.use(cors(corsOptions)) // Use this after the variable declaration
+
 
 const app = express();
 
-
+app.use(cors(corsOptions)) // Use this after the variable declaration
 app.use(express.json({limit: "10mb", extended: true}))
 app.use(express.urlencoded({limit: "10mb", extended: true, parameterLimit: 50000}))
 dotenv.config();
