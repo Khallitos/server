@@ -14,10 +14,8 @@
   "scripts": {
     "install-server": "npm install",
     "install-dependencies": " npm run install-clients && npm run install-server ",
-    "install-client": "cd clients && npm install",
     "server": "nodemon server --ignore clients",
-    "clients": "cd clients  && npm start ",
-    "start": "concurrently --kill-others-on-fail \" npm run server\" \" npm run clients\""
+    "start": "npm run server"
   },
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
