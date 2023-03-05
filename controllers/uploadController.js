@@ -34,6 +34,7 @@ const uploadmusic = async (req, res) => {
   const mimevalue1 = mimetype1.split("/")[0];
   const dataType1 = mimetype1.replace("audio/", "");
   const Key1 = nanoid() + "." + dataType1;
+  console.log(mimetype1)
 
   if (size > 5000000) {
     throw new BadRequestError("Image file should be less than 5mb");
@@ -48,7 +49,7 @@ const uploadmusic = async (req, res) => {
   }
 
   if (mimevalue1 !== "audio") {
-    throw new BadRequestError("audio should be in a mp3/mp4/wav/mpeg format");
+    throw new BadRequestError("Audio should be in a mp3/mp4/wav/mpeg format");
   }
   const buffer = files.file[0].buffer;
   const buffer1 = files.file1[0].buffer;
